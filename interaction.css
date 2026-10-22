@@ -1,0 +1,31 @@
+button:focus-visible,a:focus-visible{outline:2px solid var(--pink);outline-offset:4px}
+.top-nav{margin-left:0}
+.footer{justify-content:center}
+button:disabled{cursor:wait;opacity:.6}
+.memory-card{cursor:zoom-in}
+.memory-delete{display:grid;place-items:center;font-size:18px;line-height:1;box-shadow:0 4px 14px #20231c33;backdrop-filter:blur(8px)}
+.memory-delete:hover{background:#fff;color:#a4504d;transform:scale(1.08)}
+.memory-delete:focus-visible{opacity:1}
+.confirm-dialog{width:min(440px,calc(100vw - 32px));overflow:visible}
+.confirm-card{position:relative;padding:34px 32px 26px;background:var(--paper);border:1px solid color-mix(in srgb,var(--line) 70%,transparent);border-radius:8px;box-shadow:0 24px 90px #12150f4d;text-align:center;animation:modalIn .24s cubic-bezier(.2,.8,.2,1)}
+.confirm-icon{width:52px;height:52px;margin:0 auto 20px;border-radius:50%;display:grid;place-items:center;background:#f1e5dc;color:#a66a5d;font:24px var(--serif);transform:rotate(45deg)}
+.confirm-card .eyebrow{justify-content:center}
+.confirm-card h2{font:500 32px var(--serif);letter-spacing:-.7px;margin:10px 0}
+.confirm-card h2 em{color:#bd8277}
+.confirm-card>p{max-width:320px;margin:0 auto;color:var(--muted);font-size:12px;line-height:1.8;overflow-wrap:anywhere}
+.confirm-actions{display:flex;justify-content:center;gap:10px;margin-top:24px}
+.confirm-actions .button{justify-content:center;gap:8px;padding:12px 14px;font-size:10px}
+.button-danger{background:#a95e56;color:#fff;border:1px solid #a95e56}
+.button-danger:hover{background:#914b45}
+.confirm-foot{display:block;margin-top:19px;color:var(--muted);font:italic 11px var(--serif)}
+.memory-dialog{width:min(860px,calc(100vw - 28px));max-height:calc(100vh - 28px);overflow:visible}
+.memory-lightbox{position:relative;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(210px,.65fr);background:var(--paper);border-radius:8px;overflow:hidden;box-shadow:0 24px 90px #12150f4d;animation:modalIn .24s cubic-bezier(.2,.8,.2,1)}
+.memory-lightbox>img{width:100%;height:min(76vh,680px);object-fit:cover;background:var(--sage)}
+.memory-lightbox .modal-close{z-index:2;width:34px;height:34px;display:grid;place-items:center;top:12px;right:12px;border-radius:50%;background:color-mix(in srgb,var(--paper) 88%,transparent);color:var(--ink);line-height:1}
+.lightbox-caption{align-self:end;padding:28px 24px 34px}
+.lightbox-caption .eyebrow{font-size:8px}
+.lightbox-caption h2{font:500 clamp(24px,3vw,35px)/1.15 var(--serif);margin:13px 0}
+.lightbox-caption p{font-size:9px;letter-spacing:1.4px;color:var(--muted);margin:0}
+@keyframes modalIn{from{opacity:0;transform:translateY(9px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:600px){.confirm-card{padding:30px 21px 23px}.confirm-actions{flex-direction:column-reverse}.confirm-actions .button{width:100%}.memory-lightbox{grid-template-columns:1fr;max-height:calc(100vh - 28px);overflow:auto}.memory-lightbox>img{height:min(61vh,520px)}.lightbox-caption{padding:20px 20px 23px}.memory-delete{opacity:1;top:8px;right:8px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

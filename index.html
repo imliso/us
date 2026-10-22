@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f6f2">
+  <meta name="description" content="Lisa and Rani's little corner for photos, playlists, and all the tiny things worth remembering.">
+  <title>our little corner — Lisa & Rani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="interaction.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <nav class="top-nav"><a class="nav-link active" href="#home">home</a><a class="nav-link" href="#galeri">the gallery</a><a class="nav-link" href="#tentang">about us</a></nav>
+    <div class="top-actions"><button class="icon-button" id="themeBtn" aria-label="Switch theme" title="Switch theme">☼</button><button class="profile-pill" id="profileBtn"><span class="tiny-avatar lisa-avatar">♡</span><span id="currentName">Log in</span><span class="chevron">⌄</span></button></div>
+  </header>
+  <main id="home">
+    <section class="hero wrap">
+      <div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> OUR LITTLE CORNER <span class="eyebrow-line"></span> EST. 2025</div>
+        <h1>Two stories,<br>one <em>little world.</em></h1>
+        <p class="hero-desc">A cozy spot for the little things that mean a lot—good days, blurry photos, favorite songs, and everything in between.</p>
+        <div class="hero-cta"><a class="button button-dark" href="#galeri">Come on in <span>↗</span></a><button class="text-button" id="shareBtn">Share our corner <span>↗</span></button></div>
+        <div class="hero-foot"><div class="avatar-stack"><span class="avatar lisa-avatar">L</span><span class="avatar rani-avatar">R</span></div><span class="muted-small">made with love by <strong>Lisa & Rani</strong></span></div>
+      </div>
+      <div class="hero-art"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="photo-card photo-back"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=600&q=85" alt="A quiet morning in the trees"></div><div class="photo-card photo-front"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=600&q=85" alt="A happy day with friends"></div><span class="art-spark spark-a">✳</span><span class="art-spark spark-b">✳</span><div class="art-note"><span>✿</span> little moments,<br>big memories</div><div class="art-date">EST. 2025<br><span>our little corner</span></div></div>
+    </section>
+    <section class="stats-row wrap"><div><span class="stat-number" id="memoryCount">08</span><span class="stat-label">little memories</span></div><div class="stat-divider"></div><div><span class="stat-number">04</span><span class="stat-label">friends in our circle</span></div><div class="stat-divider"></div><div><span class="stat-number">∞</span><span class="stat-label">more stories to come</span></div><span class="stats-scribble">good days, great laughs &<br>a little bit of chaos <span>♡</span></span></section>
+    <section class="section wrap" id="galeri"><div class="section-head"><div><div class="eyebrow">01 — THE GOOD STUFF</div><h2>Little bits of <em>life.</em></h2></div><button class="button button-outline" id="uploadBtn"><span>＋</span> Add a memory</button><input id="fileInput" type="file" accept="image/*" hidden></div>
+      <div class="filter-row"><div class="filters" id="galleryFilters"><button class="filter active" data-filter="Semua">All <span id="allCount">08</span></button><button class="filter" data-filter="Lisa">Lisa</button><button class="filter" data-filter="Rani">Rani</button><button class="filter" data-filter="Bersama">Together</button></div><span class="gallery-note">every picture has a little story <span>↙</span></span></div>
+      <div class="gallery-grid" id="galleryGrid"></div><div class="more-row"><span class="muted-small" id="galleryCaption">all our little moments, in one place</span><button class="text-button" id="moreBtn">See all the memories <span>→</span></button></div>
+    </section>
+    <section class="section about-section" id="tentang"><div class="wrap"><div class="section-head"><div><div class="eyebrow">02 — A LITTLE ABOUT US</div><h2>Besties through <em>every season.</em></h2></div><p class="about-intro">One's team matcha, one's team coffee. But laughing until our stomachs hurt? Always in sync.</p></div>
+      <div class="about-grid"><article class="person-card lisa-card"><div class="person-top"><span class="person-number">01 / 02</span><span class="person-flower">✳</span></div><div class="person-avatar lisa-avatar">L</div><h3>Lisa <span>♡</span></h3><p class="person-quote">“Collecting little moments, because that's where the good stuff hides.”</p><div class="tag-list"><span>📷 photography</span><span>🍵 matcha dates</span><span>🎨 journaling</span></div><div class="person-foot"><span>ON REPEAT LATELY</span><a href="https://open.spotify.com/search/Glue%20Song%20beabadoobee" target="_blank" rel="noreferrer">Glue Song — beabadoobee ↗</a></div></article>
+        <article class="person-card rani-card"><div class="person-top"><span class="person-number">02 / 02</span><span class="person-flower">✿</span></div><div class="person-avatar rani-avatar">R</div><h3>Rani <span>♡</span></h3><p class="person-quote">“Everything feels a little lighter when we can laugh about it together.”</p><div class="tag-list"><span>🎧 live music</span><span>🥐 cafe hopping</span><span>🌿 slow mornings</span></div><div class="person-foot"><span>ON REPEAT LATELY</span><a href="https://open.spotify.com/search/Birds%20of%20a%20Feather%20Billie%20Eilish" target="_blank" rel="noreferrer">Birds of a Feather — Billie Eilish ↗</a></div></article>
+        <article class="playlist-card"><div class="playlist-orb orb-a"></div><div class="playlist-orb orb-b"></div><div class="playlist-content"><span class="playlist-label">SONGS THAT FEEL LIKE US</span><span class="music-icon">♫</span><h3>our little<br><em>soundtrack.</em></h3><p>For long drives, longer chats, and those “one more song” kind of nights.</p><a class="button button-white" href="https://open.spotify.com/search/friendship%20playlist" target="_blank" rel="noreferrer">Play our playlist <span>↗</span></a><span class="playlist-small">made with ♡ by Lisa & Rani</span></div><div class="equalizer"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article></div>
+    </div></section>
+    <footer class="footer wrap"><span class="footer-sign">by.L</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <dialog id="uploadDialog"><form method="dialog" class="upload-modal" id="uploadForm"><button class="modal-close" value="cancel" aria-label="Close">×</button><div class="eyebrow">ADD TO THE GALLERY</div><h2>Save this <em>little moment.</em></h2><label class="upload-drop" for="modalFile"><span class="upload-icon">＋</span><span id="fileLabel">Choose a photo from your device</span><small>PNG, JPG, or WEBP</small><input id="modalFile" type="file" accept="image/*" hidden></label><label class="field-label">THE STORY BEHIND IT<input id="captionInput" maxlength="80" placeholder="e.g. a random Tuesday in Bandung..."></label><label class="field-label">POSTING AS<select id="ownerInput"><option>Lisa</option><option>Rani</option></select></label><button type="submit" class="button button-dark submit-upload">Add to our gallery <span>↗</span></button><p class="modal-hint" id="storageHint">Your photo will be saved to our shared corner.</p></form></dialog>
+  <dialog id="authDialog"><form method="dialog" class="upload-modal" id="authForm"><button class="modal-close" value="cancel" aria-label="Close">×</button><div class="eyebrow">OUR LITTLE CORNER · FRIENDS' SPACE</div><h2 id="authHeading">Hey, <em>bestie.</em></h2><p class="auth-copy" id="authCopy">Log in to catch up on our little memories.</p><label class="field-label" id="authNameWrap" hidden>YOUR NAME<input id="authName" type="text" maxlength="32" autocomplete="name" placeholder="What should we call you?"></label><label class="field-label" data-auth-field>EMAIL<input id="authEmail" type="email" autocomplete="username" required placeholder="you@email.com"></label><label class="field-label" data-auth-field>PASSWORD<input id="authPassword" type="password" autocomplete="current-password" minlength="6" required placeholder="At least 6 characters"></label><button type="submit" class="button button-dark submit-upload" id="loginButton">Log in to our corner <span>↗</span></button><button type="button" class="text-button signout-button" id="authModeBtn">New here? Create an account</button><button type="button" class="text-button signout-button" id="signoutBtn">Log out</button><p class="modal-hint" id="authHint">Your account gives you access to our shared gallery.</p></form></dialog>
+  <dialog id="confirmDialog" class="confirm-dialog"><form method="dialog" class="confirm-card"><button class="modal-close" value="cancel" aria-label="Close">×</button><span class="confirm-icon">↗</span><div class="eyebrow">A QUICK CHECK</div><h2>Let this one <em>go?</em></h2><p id="confirmCopy">This memory will be removed from your shared corner.</p><div class="confirm-actions"><button class="button button-outline" value="cancel">Keep this memory</button><button class="button button-danger" value="confirm">Delete memory</button></div><span class="confirm-foot">some moments are worth keeping ♡</span></form></dialog>
+  <dialog id="memoryDialog" class="memory-dialog"><form method="dialog" class="memory-lightbox"><button class="modal-close" value="close" aria-label="Close">×</button><img id="lightboxImage" src="" alt=""><div class="lightbox-caption"><div class="eyebrow">LITTLE MOMENT, BIG FEELING</div><h2 id="lightboxTitle"></h2><p id="lightboxDate"></p></div></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
